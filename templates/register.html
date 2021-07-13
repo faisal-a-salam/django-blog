@@ -1,0 +1,57 @@
+{% extends 'base.html' %} {% block title %}
+<title>Register Page</title>
+{% endblock title %} {% block body %}
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <h1 class="text-center">Register Page</h1>
+      <form action="/register/" method="POST">
+        {% csrf_token %}
+        <div class="form-row">
+          <div class="form-group col-md-6">
+            <label for="fname">First Name</label>
+            <input type="text" class="form-control" id="fname" name="fname" />
+          </div>
+          <div class="form-group col-md-6">
+            <label for="lname">Last Name</label>
+            <input type="text" class="form-control" id="lname" name="lname" />
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group col-md-6">
+            <label for="uname">User Name</label>
+            <input type="text" class="form-control" id="uname" name="uname" />
+          </div>
+          <div class="form-group col-md-6">
+            <label for="email">Email</label>
+            <input type="email" class="form-control" id="email" name="email" />
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group col-md-6">
+            <label for="pass1">Password 1</label>
+            <input
+              type="password"
+              class="form-control"
+              id="pass1"
+              name="pass1"
+            />
+          </div>
+          <div class="form-group col-md-6">
+            <label for="pass2">Password 2</label>
+            <input
+              type="password"
+              class="form-control"
+              id="pass2"
+              name="pass2"
+            />
+          </div>
+        </div>
+        <button type="submit" class="btn btn-danger btn-sm">Register</button>
+      </form>
+    </div>
+  </div>
+</div>
+
+{% endblock body %}

@@ -1,0 +1,35 @@
+{% extends 'base.html' %} {% block title %}
+<title>Login Page</title>
+{% endblock title %} {% block body %}
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <h1 class="text-center">Login Page</h1>
+      <form>
+        <div class="form-row justify-content-center">
+          <div class="form-group col-md-6">
+            <label for="uname">User Name</label>
+            <input type="email" class="form-control" id="uname" name="uname" />
+          </div>
+        </div>
+        <div class="form-row justify-content-center">
+          <div class="form-group col-md-6">
+            <label for="pass1">Password</label>
+            <input
+              type="password"
+              class="form-control"
+              id="password"
+              name="password"
+            />
+          </div>
+        </div>
+        <div class="text-center">
+          <button type="submit" class="btn btn-danger btn-sm">login</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+{% endblock body %}
